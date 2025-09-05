@@ -1,0 +1,147 @@
+
+@layer components {
+  /* Enhanced upload area */
+  .upload-area {
+    @apply border-2 border-dashed rounded-lg p-3 transition-all duration-300 mb-4;
+    border-color: rgba(51, 195, 240, 0.4);
+    background-color: rgba(16, 42, 67, 0.2);
+  }
+
+  .upload-area:hover, .upload-area-dragging {
+    @apply bg-[#102a43]/30;
+    border-color: #33C3F0;
+  }
+
+  .upload-area-dragging {
+    @apply bg-[#102a43]/40;
+    animation: border-pulse 1.5s infinite, scale-bounce 0.5s ease-out;
+    box-shadow: 0 0 20px rgba(51, 195, 240, 0.5);
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 15px rgba(51, 195, 240, 0.3);
+  }
+  
+  /* Modern form and input styling */
+  .form-input {
+    @apply bg-[#0f2231] border-[#33C3F0]/50 text-white font-inter w-full;
+    transition: all 0.2s ease;
+  }
+  
+  .form-input:focus {
+    @apply border-[#33C3F0] outline-none;
+    box-shadow: 0 0 0 2px rgba(51, 195, 240, 0.3);
+  }
+  
+  .form-label {
+    @apply font-space-grotesk text-[#33C3F0] text-sm font-medium;
+  }
+
+  /* Table styling */
+  .data-table {
+    @apply w-full border-collapse;
+  }
+
+  .data-table th {
+    @apply text-left py-2 px-4 text-sm font-medium text-gray-400 border-b border-[#1e375f]/50;
+  }
+
+  .data-table td {
+    @apply py-2 px-4 border-b border-[#1e375f]/30;
+  }
+
+  .data-table tr:hover {
+    @apply bg-[#1e375f]/20;
+  }
+
+  /* File cards */
+  .file-card {
+    @apply bg-[#102a43]/80 rounded-lg p-3 border border-[#33C3F0]/30 hover:border-[#33C3F0]/60 transition-all;
+  }
+
+  .file-card-header {
+    @apply flex justify-between items-center mb-2;
+  }
+
+  .file-tag {
+    @apply text-xs px-2 py-0.5 rounded-full bg-[#1e375f] text-gray-300;
+  }
+  
+  /* Fix for input elements to make them responsive */
+  .input-container {
+    @apply flex w-full;
+  }
+  
+  .input-container input {
+    @apply flex-1;
+  }
+  
+  /* Progress bar styling */
+  .progress-bar {
+    @apply w-full h-1.5 bg-[#102a43] rounded-full overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-300 ease-out;
+  }
+  
+  /* Button fixes for consistency */
+  .action-button {
+    @apply bg-[#33C3F0] text-black font-bold py-1.5 px-4 rounded-md hover:bg-[#0EA5E9] transition-colors text-sm;
+  }
+}
+
+/* Add animations for the upload area */
+@keyframes border-glow {
+  0%, 100% {
+    border-color: rgba(51, 195, 240, 0.4);
+    box-shadow: 0 0 10px rgba(51, 195, 240, 0.3);
+  }
+  50% {
+    border-color: rgba(51, 195, 240, 0.8);
+    box-shadow: 0 0 20px rgba(51, 195, 240, 0.5);
+  }
+}
+
+/* New pulsing border animation specifically for drag events */
+@keyframes border-pulse {
+  0%, 100% {
+    border-color: rgba(51, 195, 240, 0.6);
+    box-shadow: 0 0 15px rgba(51, 195, 240, 0.4);
+  }
+  50% {
+    border-color: rgba(51, 195, 240, 1);
+    box-shadow: 0 0 25px rgba(51, 195, 240, 0.7);
+  }
+}
+
+/* Subtle scale animation when dragging */
+@keyframes scale-bounce {
+  0% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Float animation for the upload icon */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}

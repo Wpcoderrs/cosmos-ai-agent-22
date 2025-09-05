@@ -1,0 +1,54 @@
+
+/* Button animation keyframes */
+@keyframes button-pulse-purple {
+  0%, 100% {
+    box-shadow: 0 0 12px theme('colors.cosmos.purple.DEFAULT'),
+                0 0 4px theme('colors.cosmos.purple.DEFAULT');
+  }
+  50% {
+    box-shadow: 0 0 18px theme('colors.cosmos.purple.light'),
+                0 0 6px theme('colors.cosmos.purple.light');
+  }
+}
+
+@keyframes button-pulse-ready {
+  0%, 100% {
+    background-color: theme('colors.cosmos.purple.light');
+    box-shadow: 0 0 8px theme('colors.cosmos.purple.light');
+  }
+  50% {
+    background-color: theme('colors.cosmos.purple.DEFAULT');
+    box-shadow: 0 0 12px theme('colors.cosmos.purple.DEFAULT');
+  }
+}
+
+@keyframes divider-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    box-shadow: 0 0 8px theme('colors.cosmos.purple.light');
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 12px theme('colors.cosmos.purple.light');
+  }
+}
+
+@keyframes cosmic-shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes cosmic-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(30, 130, 247, 0.4), 
+                0 0 15px rgba(30, 130, 247, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(30, 130, 247, 0.6), 
+                0 0 20px rgba(30, 130, 247, 0.3);
+  }
+}

@@ -1,0 +1,95 @@
+
+@layer components {
+  /* Text styling classes - modern, cyan-focused */
+  .cosmic-title {
+    @apply text-[#33C3F0] font-medium text-xl md:text-2xl tracking-wider font-space-grotesk;
+  }
+  
+  .cosmic-subtitle {
+    @apply text-[#0EA5E9] font-medium text-lg font-space-grotesk;
+  }
+  
+  .cosmic-text {
+    @apply text-gray-200 font-light font-inter;
+  }
+  
+  .small-cosmic-text {
+    @apply text-gray-300/90 text-sm font-inter;
+  }
+  
+  /* Subtle header animation */
+  .cosmos-header {
+    @apply font-medium tracking-wider font-space-grotesk;
+    transition: color 0.3s ease;
+  }
+  
+  .cosmos-header:hover {
+    color: #5ab5e6;
+  }
+  
+  /* Legacy title styles - keeping for reference */
+  .title-cosmos {
+    @apply font-medium text-[#33C3F0] tracking-wider font-space-grotesk;
+  }
+  
+  .cosmos-title {
+    @apply font-medium text-[#33C3F0] tracking-wider font-space-grotesk;
+  }
+  
+  .celestial-text {
+    @apply font-medium tracking-wide font-inter;
+  }
+  
+  .celestial-mind {
+    @apply text-celestial-mind celestial-text;
+  }
+  
+  .celestial-power {
+    @apply text-celestial-power celestial-text;
+  }
+  
+  .celestial-reality {
+    @apply text-celestial-reality celestial-text;
+  }
+  
+  .celestial-soul {
+    @apply text-celestial-soul celestial-text;
+  }
+  
+  .celestial-space {
+    @apply text-celestial-space celestial-text;
+  }
+  
+  .celestial-time {
+    @apply text-celestial-time celestial-text;
+  }
+  
+  /* Subtle gradient text effect */
+  .gradient-text {
+    background-image: linear-gradient(
+      to right,
+      #33C3F0,
+      #0EA5E9,
+      #33C3F0
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 6s ease infinite;
+  }
+  
+  /* System settings text style */
+  .settings-label {
+    @apply text-[#33C3F0] font-space-grotesk text-sm font-medium;
+  }
+  
+  .settings-description {
+    @apply text-gray-400 text-xs font-inter;
+  }
+  
+  /* Loading pulse for LoadingIndicator */
+  .loading-pulse {
+    @apply inline-block h-2 w-2 rounded-full animate-pulse;
+  }
+}

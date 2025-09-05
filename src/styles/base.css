@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 200 60% 12%;
+    --foreground: 0 0% 95%;
+    
+    --card: 200 40% 20%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 200 60% 12%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 195 90% 55%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 200 60% 40%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 200 3.7% 15.9%;
+    --muted-foreground: 210 5% 74.9%;
+    
+    --accent: 195 60% 50%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 195 38% 32%;
+    --input: 195 38% 32%;
+    --ring: 195 90% 55%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+  
+  main {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-cosmos-cosmic-dark;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cosmos-purple-light rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-celestial-space;
+  }
+  
+  /* Custom fonts */
+  .font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .font-exo {
+    font-family: 'Exo 2', sans-serif;
+  }
+  
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Add new fonts */
+  .font-raleway {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .font-quicksand {
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* Our new modern fonts */
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  /* Page Title Styles */
+  .title-cosmos {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#33C3F0] via-[#0EA5E9] to-[#38bdf8] animate-cosmic-pulse;
+    text-shadow: 0 0 15px rgba(51, 195, 240, 0.5);
+  }
+  
+  .title-section {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#33C3F0] to-[#0EA5E9];
+    text-shadow: 0 0 8px rgba(51, 195, 240, 0.3);
+  }
+  
+  /* Special containers */
+  .nebula-container {
+    @apply relative w-full h-full overflow-hidden z-0;
+  }
+  
+  /* Message styles for chat */
+  .message-user {
+    @apply bg-gradient-to-br from-[#0EA5E9]/70 to-[#33C3F0]/70 text-white rounded-2xl rounded-tr-sm p-4 shadow-sm backdrop-blur-sm;
+  }
+
+  .message-system {
+    @apply bg-gradient-to-br from-secondary to-[#38bdf8]/70 text-foreground dark:text-white rounded-2xl rounded-tl-sm p-4 shadow-sm backdrop-blur-sm;
+  }
+}

@@ -1,0 +1,191 @@
+@layer components {
+  .infinity-border {
+    @apply border-[#33C3F0] relative;
+    box-shadow: 0 0 3px #33C3F0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .infinity-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #33C3F0;
+    box-shadow: 0 0 8px #33C3F0, 
+                inset 0 0 3px #33C3F0;
+    z-index: -1;
+    border-radius: inherit;
+  }
+
+  .infinity-stone {
+    @apply w-2.5 h-2.5 rounded-full inline-block mr-1;
+  }
+
+  .progress-bar {
+    @apply h-2 rounded-full overflow-hidden transition-all duration-300;
+    background: rgba(10, 22, 40, 0.5);
+  }
+
+  .progress-fill {
+    @apply h-full transition-all duration-300;
+  }
+
+  /* Cosmic divider - more cyan */
+  .cosmic-divider {
+    @apply w-px mx-3 self-stretch opacity-30;
+    background: #33C3F0;
+    box-shadow: 0 0 5px #33C3F0;
+  }
+  
+  /* Enhanced loading bar with subtle effect */
+  .loading-bar-container {
+    position: relative;
+    border: 1px solid rgba(51, 195, 240, 0.2);
+    box-shadow: 0 0 4px rgba(51, 195, 240, 0.2);
+  }
+  
+  .loading-bar-progress {
+    background: linear-gradient(
+      90deg, 
+      #33C3F0,
+      #0EA5E9,
+      #33C3F0
+    );
+    background-size: 200% auto;
+    animation: loading-bar-shine 3s linear infinite;
+    box-shadow: 0 0 6px 0 #33C3F0;
+  }
+
+  /* Panel style for all cosmic UI elements */
+  .cosmic-panel {
+    @apply bg-[#102a43]/90 rounded-lg overflow-hidden flex flex-col backdrop-blur-sm;
+    border: 1px solid #33C3F0;
+    box-shadow: 0 0 10px rgba(51, 195, 240, 0.2);
+    position: relative;
+  }
+
+  /* Settings panel style */
+  .settings-panel {
+    @apply bg-[#102a43]/90 rounded-lg p-4 border border-[#33C3F0]/40;
+  }
+  
+  /* Settings tab style */
+  .settings-tab {
+    @apply data-[state=active]:bg-[#33C3F0] data-[state=active]:text-black text-sm font-space-grotesk;
+  }
+
+  /* Improved universal border class - more subtle */
+  .neon-border {
+    border: 1px solid #33C3F0;
+    box-shadow: 0 0 8px rgba(51, 195, 240, 0.3);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .neon-border:hover {
+    box-shadow: 0 0 10px rgba(51, 195, 240, 0.4);
+  }
+  
+  /* Upload area dragging effect */
+  .upload-area-dragging {
+    border-color: #33C3F0;
+    box-shadow: 0 0 15px rgba(51, 195, 240, 0.5);
+  }
+
+  /* Glow shadow effect for hover states */
+  .shadow-glow {
+    box-shadow: 0 0 12px rgba(51, 195, 240, 0.4);
+  }
+  
+  /* Workflow step */
+  .workflow-step {
+    @apply flex items-center py-2 relative;
+  }
+  
+  .workflow-step:not(:last-child):after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 32px;
+    bottom: 0;
+    width: 1px;
+    background: rgba(51, 195, 240, 0.3);
+  }
+  
+  /* Add high z-index for workflow popover */
+  .workflow-popover {
+    z-index: 9999 !important;
+  }
+  
+  /* Enhanced chat type button styles - more compact */
+  .chat-type-button {
+    @apply flex items-center py-0.5 px-2 rounded-md text-xs border border-[#33C3F0]/50 bg-cosmos-cosmic-dark text-gray-200 hover:bg-cosmos-cosmic-light transition-all duration-300;
+    box-shadow: 0 0 5px rgba(51, 195, 240, 0.2);
+  }
+  
+  /* Improved active state for chat type buttons */
+  .chat-type-button-active {
+    @apply border-[#33C3F0] bg-[#33C3F0]/20;
+    box-shadow: 0 0 10px rgba(51, 195, 240, 0.5),
+                inset 0 0 8px rgba(51, 195, 240, 0.4);
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 0 5px rgba(51, 195, 240, 0.7);
+    transform: translateY(-1px);
+  }
+  
+  /* Indicator for selected chat type */
+  .chat-type-button-active::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: #33C3F0;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #33C3F0;
+    animation: pulse 2s infinite;
+  }
+  
+  /* Default indicator dot */
+  .chat-type-default-indicator {
+    @apply ml-1 w-1.5 h-1.5 bg-[#33C3F0] rounded-full;
+    box-shadow: 0 0 5px #33C3F0;
+  }
+  
+  .chat-type-empty {
+    @apply bg-cosmos-cosmic-dark py-2 px-3 rounded-md border border-[#33C3F0]/20;
+  }
+  
+  /* Fix for the chat type form input visibility */
+  .chat-type-input {
+    @apply bg-[#0c1f31] text-gray-100 border-[#33C3F0]/40;
+  }
+  
+  .chat-type-input::placeholder {
+    @apply text-gray-400;
+  }
+  
+  .chat-type-input:focus {
+    @apply border-[#33C3F0] ring-[#33C3F0]/30;
+  }
+  
+  /* Pulse animation for active chat type indicator */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(51, 195, 240, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 4px rgba(51, 195, 240, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(51, 195, 240, 0);
+    }
+  }
+}

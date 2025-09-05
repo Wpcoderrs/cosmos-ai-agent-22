@@ -1,0 +1,18 @@
+
+/* Base styles */
+@import "./base.css";
+
+/* Component styles */
+@import "./components/cosmic-nebula.css";
+@import "./components/buttons.css";
+@import "./components/chat.css";
+@import "./components/ui-elements.css";
+@import "./components/typography.css";
+@import "./components/upload.css";
+
+/* Animations - modular imports */
+@import "./animations/core-animations.css";
+@import "./animations/nebula-animations.css";
+@import "./animations/button-animations.css";
+@import "./animations/neon-animations.css";
+@import "./animations/neon-border-animations.css";

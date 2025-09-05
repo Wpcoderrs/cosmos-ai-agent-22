@@ -1,0 +1,99 @@
+
+@layer components {
+  /* Enhanced chat message bubbles */
+  .message-user {
+    @apply bg-gradient-to-br from-[#0EA5E9]/70 to-[#33C3F0]/80 rounded-tl-none rounded-tr-2xl rounded-bl-2xl rounded-br-2xl shadow-md;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 
+                inset 0 -1px 1px rgba(0, 0, 0, 0.1), 
+                0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .message-system {
+    @apply bg-gradient-to-br from-[#102a43]/80 to-[#1e3a5f]/80 rounded-tl-2xl rounded-tr-none rounded-bl-2xl rounded-br-2xl shadow-md;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 
+                inset 0 -1px 1px rgba(0, 0, 0, 0.1), 
+                0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Enhanced chat input with focus state */
+  .chat-input {
+    @apply flex-1 bg-[#102a43]/80 text-white border border-[#33C3F0]/50 rounded-l-lg px-4 py-2.5 focus:outline-none transition-all duration-300;
+  }
+  
+  .chat-input:focus {
+    @apply border-[#33C3F0];
+    animation: border-glow 2s infinite;
+  }
+  
+  /* Markdown content styling */
+  .markdown-content {
+    @apply text-white;
+  }
+  
+  .markdown-content p {
+    @apply mb-1.5;
+  }
+  
+  .markdown-content ul, 
+  .markdown-content ol {
+    @apply ml-4 mb-1.5;
+  }
+  
+  .markdown-content ul {
+    @apply list-disc;
+  }
+  
+  .markdown-content ol {
+    @apply list-decimal;
+  }
+  
+  .markdown-content h1, 
+  .markdown-content h2, 
+  .markdown-content h3, 
+  .markdown-content h4 {
+    @apply font-bold mt-1.5 mb-1;
+  }
+  
+  .markdown-content h1 {
+    @apply text-base;
+  }
+  
+  .markdown-content h2 {
+    @apply text-sm;
+  }
+  
+  .markdown-content h3, 
+  .markdown-content h4 {
+    @apply text-xs;
+  }
+  
+  .markdown-content code {
+    @apply bg-[#0f2231] px-1 py-0.5 rounded text-[#33C3F0];
+  }
+  
+  .markdown-content pre {
+    @apply bg-[#0f2231] p-2 rounded my-1.5 overflow-x-auto;
+  }
+  
+  /* Conversation list styling */
+  .conversation-item {
+    @apply p-2 rounded-md cursor-pointer flex justify-between items-center;
+    @apply transition-all duration-200 border border-transparent;
+  }
+  
+  .conversation-item:hover {
+    @apply bg-[#102a43] border-[#33C3F0]/30;
+  }
+  
+  .conversation-item.active {
+    @apply bg-[#33C3F0]/20 border-[#33C3F0]/60;
+  }
+  
+  .conversation-title {
+    @apply text-sm truncate;
+  }
+  
+  .conversation-date {
+    @apply text-xs text-gray-400;
+  }
+}

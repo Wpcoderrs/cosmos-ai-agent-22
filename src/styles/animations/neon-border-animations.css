@@ -1,0 +1,45 @@
+
+/* Neon border animations - more subtle and less glowy */
+@keyframes neon-border-pulse {
+  0% {
+    opacity: 0.6;
+    box-shadow: 0 0 3px rgba(58, 158, 220, 0.4),
+                inset 0 0 2px rgba(58, 158, 220, 0.2);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 6px rgba(58, 158, 220, 0.5),
+                inset 0 0 3px rgba(58, 158, 220, 0.3);
+  }
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 3px rgba(58, 158, 220, 0.4),
+                inset 0 0 2px rgba(58, 158, 220, 0.2);
+  }
+}
+
+@keyframes neon-border-glow {
+  0%, 100% {
+    box-shadow: 0 0 3px rgba(58, 158, 220, 0.3),
+                inset 0 0 2px rgba(58, 158, 220, 0.2);
+    opacity: 0.6;
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(58, 158, 220, 0.4),
+                inset 0 0 4px rgba(58, 158, 220, 0.3);
+    opacity: 0.8;
+  }
+}
+
+@keyframes neon-strong-pulse {
+  0%, 100% {
+    border-color: rgba(58, 158, 220, 0.5);
+    box-shadow: 0 0 4px rgba(58, 158, 220, 0.4),
+                inset 0 0 2px rgba(58, 158, 220, 0.2);
+  }
+  50% {
+    border-color: rgba(58, 158, 220, 0.7);
+    box-shadow: 0 0 8px rgba(58, 158, 220, 0.5),
+                inset 0 0 4px rgba(58, 158, 220, 0.3);
+  }
+}
