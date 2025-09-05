@@ -14,7 +14,72 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      chat_types: {
+        Row: {
+          created_at: string
+          id: string
+          is_default: boolean
+          name: string
+          type: string
+          updated_at: string
+          user_id: string
+          webhook_url: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_default?: boolean
+          name: string
+          type: string
+          updated_at?: string
+          user_id: string
+          webhook_url?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_default?: boolean
+          name?: string
+          type?: string
+          updated_at?: string
+          user_id?: string
+          webhook_url?: string | null
+        }
+        Relationships: []
+      }
+      user_settings: {
+        Row: {
+          chat_rag_webhook: string | null
+          created_at: string
+          file_processing_webhook: string | null
+          id: string
+          news_webhook: string | null
+          updated_at: string
+          user_id: string
+          youtube_webhook: string | null
+        }
+        Insert: {
+          chat_rag_webhook?: string | null
+          created_at?: string
+          file_processing_webhook?: string | null
+          id?: string
+          news_webhook?: string | null
+          updated_at?: string
+          user_id: string
+          youtube_webhook?: string | null
+        }
+        Update: {
+          chat_rag_webhook?: string | null
+          created_at?: string
+          file_processing_webhook?: string | null
+          id?: string
+          news_webhook?: string | null
+          updated_at?: string
+          user_id?: string
+          youtube_webhook?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
