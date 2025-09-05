@@ -76,7 +76,7 @@ const Index = () => {
             <>
               {/* File upload area - always visible when logged in */}
               <div className={`w-full ${!isMobile ? 'md:w-1/2' : ''} bg-cosmos-cosmic bg-opacity-50 rounded-lg neon-border overflow-hidden flex flex-col ${isMobile ? 'h-auto' : 'h-[calc(100vh-11rem)]'} backdrop-blur-sm`}>
-                <div className="p-6 flex-1 overflow-y-auto">
+                <div className="p-6 h-[600px] overflow-hidden">
                   <FileUpload />
                 </div>
               </div>
