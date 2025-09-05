@@ -169,7 +169,7 @@ export const useWebhook = () => {
   // Record file in processing queue
   const recordFileInQueue = async (userId: string, filePath: string, fileName: string): Promise<boolean> => {
     try {
-      const { error: insertError } = await supabase
+      const { error: insertError } = await (supabase as any)
         .from('file_processing_queue')
         .insert({
           user_id: userId,
